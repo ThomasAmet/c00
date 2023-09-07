@@ -6,7 +6,7 @@
 /*   By: tamet <tamet@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 17:33:24 by tamet             #+#    #+#             */
-/*   Updated: 2023/09/07 17:42:25 by tamet            ###   ########.fr       */
+/*   Updated: 2023/09/07 18:10:39 by tamet            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,8 @@ void	ft_is_negative(int n)
 	ft_putchar(answer);
 }
 
-int	main(int ac, char av)
-{
-	int	nb;
-
-	nb = (int) ac[1][0];
-	ft_is_negative(nb);
-	return (0);
-}
+// int	main(void)
+// {
+// 	ft_is_negative(0);
+// 	return (0);
+// }

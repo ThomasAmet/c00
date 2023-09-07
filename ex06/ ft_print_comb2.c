@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_comb.c                                    :+:      :+:    :+:   */
+/*    ft_print_comb2.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tamet <tamet@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/07 18:18:02 by tamet             #+#    #+#             */
-/*   Updated: 2023/09/07 19:55:38 by tamet            ###   ########.fr       */
+/*   Created: 2023/09/07 18:40:51 by tamet             #+#    #+#             */
+/*   Updated: 2023/09/07 21:16:08 by tamet            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,37 +20,53 @@ void	ft_print_nb(int n)
 	write(1, &nb, 1);
 }
 
-void	ft_print_comb(void)
+void	single_to_double_digits(int n)
+{	
+	int	decimal;
+	int	unit;
+
+	decimal = n / 10;
+	if (decimal < 1)
+	{
+		ft_print_nb(0);
+		ft_print_nb(n);
+	}
+	else
+	{
+		unit = n % 10;
+		ft_print_nb(decimal);
+		ft_print_nb(unit);
+	}
+}
+
+void	ft_print_comb2(void)
 {
 	int	i;
 	int	j;
-	int	k;
 
 	i = 0;
-	while (i < 7)
+	while (i < 99)
 	{
 		j = i + 1;
-		while (j <= 8)
+		while (j <= 99)
 		{
-			k = j + 1;
-			while (k <= 9)
+			single_to_double_digits(i);
+			write(1, " ", 1);
+			single_to_double_digits(j);
+			if ((i != 98) | (j != 99))
 			{
-				ft_print_nb(i);
-				ft_print_nb(j);
-				ft_print_nb(k);
 				write(1, ",", 1);
 				write(1, " ", 1);
-				k++;
 			}
 			j++;
 		}
 		i++;
 	}
-	write(1, "789", 3);
 }
 
 // int	main(void)
 // {
-// 	ft_print_comb();
+// 	// single_to_double_digits(60);
+// 	ft_print_comb2();
 // 	return (0);
 // }
