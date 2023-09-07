@@ -1,14 +1,29 @@
-# include <unistd.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tamet <tamet@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/07 15:10:23 by tamet             #+#    #+#             */
+/*   Updated: 2023/09/07 15:20:57 by tamet            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void ft_print_alphabet(void){
-    char letter = 'a';
+#include <unistd.h>
 
-    for(int i=0; i<26; i++) {
-        char letter_to_print = letter + i;
-        write(1, &letter_to_print, 1);
-    }
-
-    char newline = '\n';
-    write(1, &newline, 1);
-
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
 }
+
+void	ft_print_alphabet(void)
+{
+	write(1, "abcdefghijklmnopqrstuvwxyz", 26);
+}
+
+// int	main(void)
+// {
+// 	ft_print_alphabet();
+// 	return (0);
+// }

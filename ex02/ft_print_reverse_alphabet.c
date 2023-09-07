@@ -1,13 +1,36 @@
-# include <unistd.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_reverse_alphabet.c                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tamet <tamet@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/07 15:21:53 by tamet             #+#    #+#             */
+/*   Updated: 2023/09/07 16:26:32 by tamet            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void ft_print_reverse_alphabet(void){
-    char last_letter = 'z';
+#include <unistd.h>
 
-    for(int i=0; i<26; i++) {
-        char letter_to_display = last_letter - i;
-        write(1, &letter_to_display, 1);
-    }
-
-    char newline = '\n';
-    write(1, &newline, 1);
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
 }
+
+void	ft_print_reverse_alphabet(void)
+{
+	char	c;
+
+	c = 'z';
+	while (c >= 'a')
+	{
+		write(1, &c, 1);
+		c--;
+	}
+}
+
+// int	main(void)
+// {
+// 	ft_print_reverse_alphabet();
+// 	return (0);
+// }
