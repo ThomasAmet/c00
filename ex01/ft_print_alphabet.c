@@ -7,4 +7,8 @@ void ft_print_alphabet(void){
         char letter_to_print = letter + i;
         write(1, &letter_to_print, 1);
     }
+
+    char newline = '\n';
+    write(1, &newline, 1);
+
 }

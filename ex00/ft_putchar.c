@@ -3,4 +3,7 @@
 void ft_putchar(char c) 
 {
     write(1, &c, 1);
+    char newline = '\n';
+    write(1, &newline, 1);
+
 }
