@@ -6,7 +6,7 @@
 /*   By: tamet <tamet@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 18:18:02 by tamet             #+#    #+#             */
-/*   Updated: 2023/09/07 19:55:38 by tamet            ###   ########.fr       */
+/*   Updated: 2023/09/11 21:31:31 by tamet            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,8 +49,9 @@ void	ft_print_comb(void)
 	write(1, "789", 3);
 }
 
-// int	main(void)
-// {
-// 	ft_print_comb();
-// 	return (0);
-// }
+/* sint	main(void)
+ {
+ 	ft_print_comb();
+ 	return (0);
+ }
+*/
